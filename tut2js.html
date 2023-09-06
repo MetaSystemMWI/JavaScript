@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 2; //bit presentation 10
+        var b = 3;  //bit presentation 11
+        var lb = "<br>";
+
+        document.write("(a & b) =>");
+        r = (a & b);
+        document.write(r);
+        document.write(lb);
+
+        document.write("(a | b) =>");
+        r = (a | b);
+        document.write(r);
+        document.write(lb);
+
+
+        document.write("(a ^ b) =>");
+        r = (a ^ b);
+        document.write(r);
+        document.write(lb);
+
+        document.write("(~b) =>");
+        r = (~b);
+        document.write(r);
+        document.write(lb);
+
+        document.write("(a << b) =>");
+        r = (a << b);
+        document.write(r);
+        document.write(lb);
+
+        document.write("(a >> b) =>");
+        r = (a >> b);
+        document.write(r);
+        document.write(lb);
+
+        document.write("(a >>> b) =>");
+        r = (a >>> b);
+        document.write(r);
+        document.write(lb);
+
+
+        document.write("(a = b) =>");
+        r = (a = b);
+        document.write(r);
+        document.write(lb);
+
+        document.write("(a += b) =>");
+        r = (a += b);   //a = a+b
+        document.write(r);
+        document.write(lb);
+
+        document.write("(a -= b) =>");
+        r = (a -= b);
+        document.write(r);
+        document.write(lb);
+
+        document.write("(a *= b) =>");
+        r = (a *= b);
+        document.write(r);
+        document.write(lb);
+
+        document.write("(a /= b) =>");
+        r = (a /= b);
+        document.write(r);
+        document.write(lb);
+
+        document.write("(a %= b) =>");
+        r = (a %= b);
+        document.write(r);
+        document.write(lb);
+
+        document.write("(a > b) ? 100 : 200 =>");
+        r = (a > b) ? 100 : 200;
+        document.write(r);
+        document.write(lb);
+
+        var g = "Hello";
+        var n = 5;
+        var j = 6.5;
+        var k = true;
+
+
+        // t = (typeof g  == "String" ? "G is string" : "G is number");
+        document.write(typeof(g));
+        document.write(lb);
+        document.write(typeof(n));
+        document.write(lb);
+        document.write(typeof(j));
+        document.write(lb);
+        document.write(typeof(k));
+    </script>
+</body>
+</html>

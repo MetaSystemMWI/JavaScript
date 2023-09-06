@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="demo"></p>
+    <script>
+        // const d = new Date("1993-09-14");
+        const d = new Date(100000000000);
+        document.getElementById("demo").innerHTML=d;
+    </script> -->
+
+    <!-- new date()
+    new date(date string) -->
+
+
+    <!-- <div id="i">
+        Press a Key <br/> <span>And discrover his keycode to use it in your JS program</span>
+    </div>
+    <div id="k"></div>
+
+    <script>
+        var d = document, i=d.getElementById("i"),
+        k = d.getElementById("k");
+
+        d.onkeydown = d.body.onkeydown = function(e){
+            e = e || window.event;
+            i.innerHTML = '';
+            k.innerHTML =  e.keyCode || e.which;
+            return false;
+        }
+    </script> -->
+
+    <script>
+        function sayHello(name, age){
+            document.write(name+"is"+age+"year old");
+        }
+    </script>
+
+<input type="button" onclick="sayHello('Zara', 7)">
+    
+
+</body>
+</html>
