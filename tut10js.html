@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        objects 
+        // var book = new Object();
+        // book.subject = "Java";
+        // book.author = "robin";
+        // book.date = "2023";
+
+objects uisng this keyword
+        // function book(title, author){
+        //     this.title = title;
+        //     this.author = author;
+        // }
+
+
+with keyword
+        // function addprice(amount){
+        //     with(this){
+        //         price = amount;
+        //     }
+        // }
+
+        // function book(title, author){
+        //     this.title = title;
+        //     this.author = author;
+        //     this.price = 0;
+        //     this.addprice = addprice;
+        // }
+number and its functions
+        function showValue(){
+            // var v = Number.MIN_VALUE;
+            // document.write(v);
+
+            // var dayofMonth = 50;
+            // if(dayofMonth < 1 || dayofMonth >31){
+            //     dayofMonth = Number.NaN;
+            //     alert("Day of mont b/w 1 to 31");
+            // }
+            // document.write(dayofMonth);
+
+
+            // var s = (Number.MAX_VALUE)*2;
+            // if(s == Number.POSITIVE_INFINITY){
+            //     alert(s);
+            // }
+
+constructor
+            var n = new Number(177.1234);
+            document.write("num.construct() is" + n.constructor);
+        }
+    </script>
+</head>
+<body>
+    <!-- <script>
+        var mybook = new book("Java", "Robin");
+        mybook.addprice(100);
+        document.write(mybook.title + "<br>");
+        document.write(mybook.author + "<br>");
+        document.write(mybook.price + "<br>");
+    </script> -->
+    <input type="button" value="Click" onclick="showValue()">
+</body>
+</html>
