@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="myfunction()">try it</button> -->
+    <!-- <p id="demo"></p> -->
+    <script>
+
+        const fruits = ["bamama", "orange","apple","mango","pineapple","chili","watermelon"];
+
+        // let flen = fruits.length;
+
+        // let text = "<ol>";
+        //     for(let i = 0; i<flen; i++){
+        //         text = text + "<li>"+fruits[i]+"</li>";
+        //     }
+        //     text = text + "</ol>";   //a=0; a+=1; a = a+1;
+             
+        // document.write(text);
+
+        // fruits.forEach(myFunction);
+        // text +="</ol>";
+        // document.write(text);
+
+
+        // function myFunction(value){
+            
+        //     text +="<li>"+value+"</li>";
+        // }
+
+
+
+        // function myfunction(){
+        //     fruits.push("Lemon");
+        //     document.getElementById("demo").innerHTML=fruits;
+        // }
+
+
+        // var a = ["a","b"];
+        // var b = [1,2,3];
+
+        // var conc = a.concat(b);
+        // document.write(conc);
+        
+
+        if(!Array.prototype.filter){
+            Array.prototype.filter = function(fun /*,thisp*/){
+                var len = this.length;
+                if(typeof fun!="function")
+                throw new TypeError();
+
+                var res = new Array()
+                var thisp = arguments[l];
+
+                for(var i = 0; i<len; i++){
+                    if(i in this){
+                    var v = this[i];
+                    if(fun.call(thisp, v, i, this))
+                    res.push(v);
+                    }
+                }
+                return res;
+            };
+        }
+        function isBigEnough(element, index, array){
+            return(element >= 10);
+        }
+    var filtered = [12, 5, 8, 130, 44, 60,30,3,2,5].filter(isBigEnough);
+    document.write("Filtered Array:"+ filtered);
+    </script>
+</body>
+</html>
