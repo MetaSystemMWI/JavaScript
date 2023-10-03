@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="getLocation()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        const x = document.getElementById("demo");
+        function getLocation(){
+            try{
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            catch{
+                x.innerHTML = err;
+            }
+        }
+        function showPosition(position){
+            x.innerHTML = "Latitude: " +position.coords.latitude+
+            "<br>Langitude: " +position.coords.longitude; 
+        }
+    </script> -->
+
+
+
+    <input type="number" id="id1" max="100">
+    <button onclick="myFuntion()">Ok</button>
+    <p id="demo"></p>
+    <!-- validty, validationMessage, willvalidate -->
+    <!-- validity: customError, pattermismatch, rangeOverflow, 
+    rangeunderflow, stepmismatch, toolong, typemismatch, valuemissing, valid -->
+    <!-- <script>
+        function myFuntion(){
+            const inpObj = document.getElementById("id1");
+            if(!inpObj.checkValidity()){
+                document.getElementById("demo").innerHTML=inpObj.validationMessage;
+            }else{
+                document.getElementById("demo").innerHTML = alert("Ok");
+            }
+        }
+    </script> -->
+
+    <script>
+        function myFuntion(){
+            let t = "Value Ok";
+            if(document.getElementById("id1").validity.rangeOverflow){
+                t = "Value too large";
+            }
+            document.getElementById("demo").innerHTML=t;
+        }
+    </script>
+</body>
+</html>
