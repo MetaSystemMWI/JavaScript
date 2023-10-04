@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p>Count Number: <output id="result"></output></p>
+    <button onclick="startpWork()">Start</button>
+    <button onclick="stopWork()">Stop</button>
+    <script>
+        let w;
+        function startpWork(){
+            if(typeof(w) == "undefined"){
+                w = new Worker("work.js");
+            }
+            w.onmessage = function(event){
+                document.getElementById("result").innerHTML = event.data;
+            }
+        }
+        function stopWork(){
+            w.terminate();
+            w = undefined;
+        }
+    </script> -->
+
+
+    <!-- <p id="demo">Fetch a file to change this text.</p>
+    <script>
+        // let file = "fetch_into.txt";
+
+        // fetch(file).then(x => x.text()).then(y =>document.getElementById("demo").innerHTML=y);
+
+        getText("fetch_into.txt");
+        async function getText(file){
+            let x = await fetch(file);
+            let y = await x.text();  
+            document.getElementById("demo").innerHTML=y;     
+         }
+    </script> -->
+
+    <div id="demo">
+        <button onclick="loadDoc()">Chnage Content</button>
+    </div>
+    
+    <script>
+        function loadDoc(){
+            const x = new XMLHttpRequest();
+            x.onload = function(){
+                document.getElementById("demo").innerHTML= 
+                this.responseText;
+            }
+            x.open("GET","fetch_into.txt", true);
+            x.send();
+        }
+    </script>
+
+</body>
+</html>
